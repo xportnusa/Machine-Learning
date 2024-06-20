@@ -40,3 +40,17 @@ Loads the pre-trained model paraphrase-xlm-r-multilingual-v1 from Sentence Trans
 6. Returns a list of recommended product names similar to the clicked product name, limited by the top_k parameter.
 
 ## app.py
+The application uses Flask to create a web server that offers two endpoints for product recommendations.
+### A. Content-based Recommendation Endpoint (/recommend/content)
+1. This endpoint expects a POST request containing JSON data with an item_id.
+2. It retrieves the latent embeddings of products from a pre-trained neural network model (model1.h5) and computes similarities using cosine similarity.
+3. The function get_recommendations calculates similarities between the specified product (item_id) and all other products based on their embeddings.
+4. It returns a JSON response with recommended product names sorted by similarity.
+
+### B. Search-based Recommendation Endpoint (/recommend/search)
+1. This endpoint expects a POST request containing JSON data with a product_name and optionally a top_k parameter (default is 5).
+2. It uses the Sentence Transformers model (paraphrase-MiniLM-L6-v2) to encode product names into embeddings that capture semantic meanings.
+3. The function recommend_similar_products computes similarities between the provided product_name (converted to lowercase) and all product names in the dataset.
+4. It combines results from two approaches: exact substring matching and embedding similarity based on cosine similarity.
+5. The combined results ensure unique product recommendations up to the specified top_k.
+6. It returns a JSON response with recommended product names.
