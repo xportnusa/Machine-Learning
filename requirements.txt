@@ -1,0 +1,6 @@
+flask==3.0.*
+tensorflow==2.16.*
+pandas==2.2.*
+scikit-learn==1.5.*
+sentence_transformers==3.0.*
+gunicorn
