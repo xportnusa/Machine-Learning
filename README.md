@@ -27,6 +27,16 @@ To enhance user engagement on our platform, XportNusa, we've integrated a machin
 
 
 ## model2_fitur search.ipynb
-
+### A. Install Library and Import Modules
+Installs necessary libraries and imports required modules, including SentenceTransformer for a pre-trained model and util for utility functions.
+### B. Load Pre-trained Model
+Loads the pre-trained model paraphrase-xlm-r-multilingual-v1 from Sentence Transformers. This model is used to generate embeddings that represent the meaning of sentences or phrases.
+### C. recommend_similar_products Function
+1. This function recommends similar products based on a clicked product name.
+2. Converts the clicked product name to lowercase for consistency.
+3. Generates embeddings for the clicked product name and all product names in the dataset.
+4. Calculates cosine similarity between the clicked product embedding and all other product embeddings.
+5. Sorts products based on similarity score and combines results from two approaches: embedding similarity and substring matching of the clicked product name.
+6. Returns a list of recommended product names similar to the clicked product name, limited by the top_k parameter.
 
 ## app.py
