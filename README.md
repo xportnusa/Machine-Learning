@@ -5,7 +5,8 @@ To enhance user engagement on our platform, XportNusa, we've integrated a machin
 ## ML Model Details 
 
 
-## model1.h5 
+## model1_content based filterting.ipynb
+
 
 
 ## model2_fitur search.ipynb
