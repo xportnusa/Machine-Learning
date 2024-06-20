@@ -7,6 +7,23 @@ To enhance user engagement on our platform, XportNusa, we've integrated a machin
 
 ## model1_content based filterting.ipynb
 
+### A. Data Exploratory 
+1. Load and Read Data
+2. Explore and Analyze Data
+
+### B. Data Preparation
+1. Column Selection
+2. Normalization
+3. Convert to Numpy Array
+
+### C. Modelling Process 
+1. Autoencoder Setup
+2. Model Training
+3. Generate Product Embeddings
+4. Product Recommendations
+
+### D. Evaluation 
+1. Save Model
 
 
 ## model2_fitur search.ipynb
